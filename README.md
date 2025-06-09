@@ -8,11 +8,11 @@ This is a ticketing system operating using queue style organization. The goal is
 - Django (5.2.1) Follow this link in order to install https://docs.djangoproject.com/en/5.2/intro/install/
 
 # Usage
-\`\`\`bash
-python -m venv venv                     # Create a venv
-source venv/bin/activate             # Activate the venv
-pip install -r requirements.txt    # Install dependencies
-python manage.py runserver      # Run the server
+\`\`\`bash <br>
+python -m venv venv                     # Create a venv <br>
+source venv/bin/activate             # Activate the venv <br>
+pip install -r requirements.txt    # Install dependencies <br>
+python manage.py runserver      # Run the server <br>
 \`\`\`
 
 # How to run it? 
