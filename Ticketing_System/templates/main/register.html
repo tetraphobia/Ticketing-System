@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet"  href="{% static 'style.css' %}">
+
+{% block title %}
+    Register a new User
+{% endblock %}
+
+{% block content %}
+    <h1></h1>
+    <form class="form-with-validation" action="/register/" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Submit</button>
+    </form>
+{% endblock %}

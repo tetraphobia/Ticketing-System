@@ -1,0 +1,32 @@
+{% for ticket in tickets %}
+    <li>
+        <strong>{{ ticket.title }}</strong> - {{ticket.creation_date|date:"Y-m-d H:i"}}
+        <p>{{ ticket.description }}</p>
+        <p><strong>Status: {{ ticket.status }}</strong></p>
+
+        <form action="{% url 'delete_ticket' ticket.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" onclick="return confirm('Are you sure you want to delete this ticket?');">
+                Delete 
+            </button>
+        </form>
+
+        <a href="{% url 'edit_ticket' ticket.id %}">
+            <button type="submit">
+                Edit Ticket
+            </button>
+        </a>
+    </li>
+    {% empty %}
+        <h1>No Tickets Found</h1>
+{% endfor %}
+    <li>
+        <a href="{% url 'user' %}">
+            <button type="button">Home</button>
+        </a>
+    </li>
+
+</ul>
+
+
+<!--onclick="return confirm('Are you sure you want to delete this ticket?';)"-->
