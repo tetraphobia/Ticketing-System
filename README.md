@@ -9,9 +9,9 @@ This is a ticketing system operating using queue style organization. The goal is
 
 ## Usage
 ```
-bash <br>
-python -m venv venv                     # Create a venv <br>
-source venv/bin/activate             # Activate the venv <br>
-pip install -r requirements.txt    # Install dependencies <br>
-python manage.py runserver      # Run the server <br>
+bash 
+python -m venv venv                     # Create a venv 
+source venv/bin/activate             # Activate the venv 
+pip install -r requirements.txt    # Install dependencies 
+python manage.py runserver      # Run the server 
 ```
