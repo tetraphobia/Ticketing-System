@@ -10,7 +10,15 @@ class Ticket(models.Model):
     creation_date = models.DateTimeField("Date Created", default = datetime.now)
     status = models.CharField(max_length = 20, choices = status_choices, default = 'open',)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    archived = models.BooleanField(default = False)
+
+    def save(self, *args, **kwargs):
+        if self.status == "finished":
+            self.archived = True
+        super().save(*args, **kwargs)
     
-    
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
+
+
+
